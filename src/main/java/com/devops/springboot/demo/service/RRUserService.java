@@ -17,6 +17,10 @@ public class RRUserService {
 	@Autowired
 	RRUserRepository repository;
 
+	
+	/**This method is to find the list of all red rock users
+	 * @return - list of RedRockUser
+	 */
 	public List<RedRockUser> getAllRRUsers() {
 		List<RedRockUser> rrUserList = repository.findAll();
 
@@ -27,6 +31,10 @@ public class RRUserService {
 		}
 	}
 
+	/** Retrieves red rock user by the given ID
+	 * @param id
+	 * @return RedRockUser
+	 */
 	public RedRockUser getRRUserById(Long id) {
 		Optional<RedRockUser> rrUser = repository.findById(id);
 
@@ -37,6 +45,10 @@ public class RRUserService {
 		}
 	}
 
+	/**Creates new RedRockuser or updates the RedRockUser for the given ID
+	 * @param entity
+	 * @return Created/updated RedRockUser
+	 */
 	public RedRockUser createOrUpdateRRUser(RedRockUser entity) {
 		Optional<RedRockUser> rrUser = null;
 		if(entity.getId()!=null)
@@ -60,6 +72,9 @@ public class RRUserService {
 		}
 	}
 
+	/**Deletes the RedRockUser based on the given ID
+	 * @param id
+	 */
 	public void deleteRRUserById(Long id) {
 		Optional<RedRockUser> rrUser = repository.findById(id);
 

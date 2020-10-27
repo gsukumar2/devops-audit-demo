@@ -24,6 +24,9 @@ public class RRUserController {
 	@Autowired
 	RRUserService service;
 
+	/**Controller method to retrieve all RedRock users
+	 * @return list of all RedRockUsers
+	 */
 	@GetMapping
 	public ResponseEntity<List<RedRockUser>> getAllRRUsers() {
 		List<RedRockUser> list = service.getAllRRUsers();
@@ -31,6 +34,10 @@ public class RRUserController {
 		return new ResponseEntity<List<RedRockUser>>(list, new HttpHeaders(), HttpStatus.OK);
 	}
 
+	/**Controller method to retrieve RedRockUser based on the ID
+	 * @param id
+	 * @return RedRockUser
+	 */
 	@GetMapping("/{id}")
 	public ResponseEntity<RedRockUser> getRRUserById(@PathVariable("id") Long id) {
 		RedRockUser entity = service.getRRUserById(id);
@@ -38,6 +45,10 @@ public class RRUserController {
 		return new ResponseEntity<RedRockUser>(entity, new HttpHeaders(), HttpStatus.OK);
 	}
 
+	/**Controller method to create new RedRockUser or update the RedRockUser based on ID 
+	 * @param rrUser
+	 * @return RedRockUser
+	 */
 	@PostMapping
 	public ResponseEntity<RedRockUser> createOrUpdateRRUser(@RequestBody RedRockUser rrUser) {
 		RedRockUser updated = service.createOrUpdateRRUser(rrUser);
@@ -45,10 +56,14 @@ public class RRUserController {
 		return new ResponseEntity<RedRockUser>(updated, new HttpHeaders(), HttpStatus.OK);
 	}
 
+	/**Controller method to delete the RedRockUser based on ID 
+	 * @param id
+	 * @return HttpStatus ACCEPTED
+	 */
 	@DeleteMapping("/{id}")
 	public HttpStatus deleteRRUserById(@PathVariable("id") Long id) {
 		service.deleteRRUserById(id);
-		return HttpStatus.FORBIDDEN;
+		return HttpStatus.ACCEPTED;
 	}
 
 }
