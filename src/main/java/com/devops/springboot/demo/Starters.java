@@ -10,6 +10,9 @@ public class Starters {
  
     private static final Logger logger = LoggerFactory.getLogger(Starters.class);
  
+    /**
+     * To start TCP server for H2 database
+     */
     public static void startH2Server() {
         try {
             Server h2Server = Server.createTcpServer().start(); // key code
