@@ -22,6 +22,8 @@ public class RedRockUser {
 	@Column(name = "email",  length = 200)
 	private String email;
 
+	@Column(name = "address", length = 500)
+	private String address;
 	/**
 	 * @return the id
 	 */
@@ -76,6 +78,20 @@ public class RedRockUser {
 	 */
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	/**
+	 * @return the address
+	 */
+	public String getAddress() {
+		return address;
+	}
+
+	/**
+	 * @param address the address to set
+	 */
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	
 	

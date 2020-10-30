@@ -61,7 +61,7 @@ public class RRUserService {
 			newEntity.setEmail(entity.getEmail());
 			newEntity.setFirstName(entity.getFirstName());
 			newEntity.setLastName(entity.getLastName());
-
+			newEntity.setAddress(entity.getAddress());
 			newEntity = repository.save(newEntity);
 
 			return newEntity;
