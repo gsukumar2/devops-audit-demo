@@ -10,14 +10,14 @@ public class DemoApplication extends SpringBootServletInitializer{
 
 	public static void main(String[] args) {
 		// To start H2 TCP server on Spring Boot application startup?
-		Starters.startH2Server();
+		//Starters.startH2Server();
 		SpringApplication.run(DemoApplication.class, args);
 	}
-    @Override
+   /* @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
     	Starters.startH2Server();
         return application.sources(DemoApplication.class);
     }
 
-
+*/
 }
