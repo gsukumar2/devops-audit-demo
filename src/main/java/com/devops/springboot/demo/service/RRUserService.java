@@ -54,6 +54,7 @@ public class RRUserService {
 		if(entity.getId()!=null)
 		{
 		rrUser= repository.findById(entity.getId());
+		
 		}
 
 		if (rrUser!=null && rrUser.isPresent()) {
@@ -63,7 +64,7 @@ public class RRUserService {
 			newEntity.setLastName(entity.getLastName());
 			newEntity.setAddress(entity.getAddress());
 			newEntity = repository.save(newEntity);
-
+			System.out.println("new user is created successfully");
 			return newEntity;
 		} else {
 			entity = repository.save(entity);
