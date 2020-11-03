@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Table(name = "RED_ROCK_USERS")
 public class RedRockUser {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	@Column(name = "first_name")
 	private String firstName;
@@ -33,11 +33,12 @@ public class RedRockUser {
 
 	/**
 	 * @param id the id to set
-	 *//*
+	 */
 	public void setId(Long id) {
 		this.id = id;
 	}
-*/
+
+	
 	/**
 	 * @return the firstName
 	 */
