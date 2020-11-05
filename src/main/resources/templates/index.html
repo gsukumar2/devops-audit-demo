@@ -3,53 +3,76 @@
 <!DOCTYPE HTML>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>DevOps demostration</title>
+<title>DevOps demostration</title>
 
-    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
-    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+<link rel="stylesheet"
+	th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}" />
+<link rel="stylesheet" th:href="@{/css/main.css}" />
 <style>
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 ul li::before {
-  content: "\2022";
-  color: red;
-  font-weight: bold;
-  display: inline-block; 
-  width: 1em;
-  margin-left: -1em;
+	content: "\2022";
+	color: red;
+	font-weight: bold;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
 }
 </style>
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">Welcome to DevOps Demonstration</a>
-</nav>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+		<a class="navbar-brand" href="#">Welcome to DevOps Demonstration</a>
+	</nav>
 
-<main role="main" class="container">
+	<main role="main" class="container">
 
-    <div class="starter-template">
-       
-       
-        <h2 ><strong>DevOps</strong><em>-Development and Operations</em></h2>
-        <p class="para">
-  A CI/CD Pipeline implementation, or Continuous Integration/Continuous Deployment, is the backbone of the modern DevOps environment.
-  It bridges the gap between development and operations teams by automating the building, testing, and deployment of applications. 
-  In this blog, we will learn what a CI/CD pipeline is and how it works.​</p>
-  
-  
-    </div>
-<div>
-</main>
-<!-- /.container -->
+	<div class="starter-template">
 
-<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+
+		<h2>
+			<strong>DevOps</strong><em>-Development and Operations</em>
+		</h2>
+		<p class="para">A CI/CD Pipeline implementation, or Continuous
+			Integration/Continuous Deployment, is the backbone of the modern
+			DevOps environment. It bridges the gap between development and
+			operations teams by automating the building, testing, and deployment
+			of applications. In this blog, we will learn what a CI/CD pipeline is
+			and how it works.​</p>
+		<p class="para">
+			<Strong>Why DevOps?</Strong></br>
+		<ul>
+
+
+			<li>Shorter Development Cycles, Faster Innovation</li>
+			</br>
+			<li>Reduced Deployment Failures, Rollbacks, and Time to Recover</li>
+			</br>
+			<li>Improved Communication and Collaboration</li>
+			</br>
+			<li>Increased Efficiencies</li>
+			</br>
+			<li>Reduced Costs and IT Headcount</li>
+			</br>
+		</ul>
+		</p>
+
+	</div>
+	<div>
+	</main>
+	<!-- /.container -->
+
+	<script type="text/javascript"
+		th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
 </body>
 </html>
 
