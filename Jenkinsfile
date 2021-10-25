@@ -1,32 +1,12 @@
-pipeline {
-    agent any
+node {
 
-    tools {
-        // Install the Maven version configured as "M3" and add it to the path.
-        maven "M3"
-    }
+	stage('SCM Checkout') {
+		git 'https://github.com/gsukumar2/devops-audit-demo.git'
+	}
+	stage('Build Maven') {
+		def mvnHome = tool name: 'M3', type: 'maven'
+		sh "${mvnHome}/bin/mvn package"
+	}
 
-    stages {
-        stage('Build') {
-            steps {
-                // Get some code from a GitHub repository
-                git 'https://github.com/gsukumar2/devops-audit-demo.git'
 
-                // Run Maven on a Unix agent.
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
-
-                // To run Maven on a Windows agent, use
-                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
-            }
-
-           // post {
-                // If Maven was able to run the tests, even if some of the test
-                // failed, record the test results and archive the jar file.
-           //     success {
-           //         junit '**/target/surefire-reports/TEST-*.xml'
-           //         archiveArtifacts 'target/*.jar'
-           //     }
-           // }
-        }
-    }
 }
